@@ -168,6 +168,9 @@ open class ShoutView: UIView {
 
     let textOffsetY = imageView.image != nil ? imageView.frame.origin.x + 3 : textOffsetX + 5
 
+    if Config.centerTitle {
+        titleLabel.textAlignment = .center
+    }
     titleLabel.frame.origin = CGPoint(x: textOffsetX, y: textOffsetY)
     subtitleLabel.frame.origin = CGPoint(x: textOffsetX, y: titleLabel.frame.maxY + 2.5)
 
